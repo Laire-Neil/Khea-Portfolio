@@ -765,7 +765,7 @@ ul {
 
 @media (max-width: 768px) {
     .navbar {
-        padding-inline: 1.25rem;
+        padding-inline: 10px;
     }
 
     .navbar__toggle {
@@ -796,6 +796,11 @@ ul {
     .section {
         padding-inline: 1.25rem;
         padding-block: 3.5rem;
+    }
+
+    /* Add small side padding for the home (hero) section on mobile */
+    .hero {
+        padding-inline: 10px;
     }
 
     .section-title {
