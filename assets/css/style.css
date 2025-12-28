@@ -741,12 +741,18 @@ ul {
 
 @media (max-width: 960px) {
     .hero__inner {
-        grid-template-columns: minmax(0, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 2.5rem;
     }
 
-    .hero__content {
+    /* Force ID card to appear above text on mobile */
+    .hero__id-card {
         order: -1;
+    }
+
+    .hero__content {
+        order: 0;
     }
 
     .project-card,
@@ -785,6 +791,11 @@ ul {
         opacity: 0;
         pointer-events: none;
         transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+
+    /* Mobile menu: use dark text for links on light background */
+    .navbar__links a {
+        color: var(--text-color);
     }
 
     .navbar__links--open {
